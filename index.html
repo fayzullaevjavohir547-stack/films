@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>WATCH • Home</title>
+      <link rel="stylesheet" href="./syle.css" />
+   </head>
+   <body>
+      <div class="app">
+         <!-- SIDEBAR -->
+         <aside class="sidebar">
+            <div class="brand">
+               <div class="brand__icon">🎬</div>
+               <div class="brand__name">WATCH</div>
+            </div>
+
+            <nav class="nav">
+               <a class="nav__item nav__item--active" href="#">
+                  <span class="nav__icon">🏠</span>
+                  <span class="nav__text">Home</span>
+               </a>
+               <a class="nav__item" href="#" id="btnFavView">
+                  <span class="nav__icon">♡</span>
+                  <span class="nav__text">Favourites</span>
+               </a>
+               <a class="nav__item" href="#">
+                  <span class="nav__icon">📈</span>
+                  <span class="nav__text">Trending</span>
+               </a>
+               <a class="nav__item" href="#">
+                  <span class="nav__icon">🗓️</span>
+                  <span class="nav__text">Coming soon</span>
+               </a>
+
+               <div class="nav__divider"></div>
+
+               <a class="nav__item" href="#">
+                  <span class="nav__icon">👥</span>
+                  <span class="nav__text">Community</span>
+               </a>
+               <a class="nav__item" href="#">
+                  <span class="nav__icon">💬</span>
+                  <span class="nav__text">Social</span>
+               </a>
+            </nav>
+
+            <div class="sidebar__bottom">
+               <button class="ghost" type="button">
+                  <span>⚙️</span><span>Settings</span>
+               </button>
+               <button class="ghost" type="button">
+                  <span>↩️</span><span>Logout</span>
+               </button>
+            </div>
+         </aside>
+
+         <!-- MAIN -->
+         <main class="main">
+            <header class="topbar">
+               <div class="topbar__tabs">
+                  <button class="tab tab--active" type="button">Movies</button>
+                  <button class="tab" type="button">Series</button>
+                  <button class="tab" type="button">Documentaries</button>
+               </div>
+
+               <div class="topbar__right">
+                  <button class="iconBtn" type="button" aria-label="Search">🔎</button>
+                  <button class="iconBtn" type="button" aria-label="Notifications">🔔</button>
+                  <div class="profile">
+                     <div class="avatar" aria-hidden="true"></div>
+                     <div class="profile__name">Imanol</div>
+                  </div>
+               </div>
+            </header>
+
+            <!-- HERO -->
+            <section class="hero" id="hero">
+               <div class="hero__overlay"></div>
+
+               <div class="hero__content">
+                  <div class="hero__kicker">Home-screen</div>
+
+                  <div class="hero__titleWrap">
+                     <div class="hero__subtitle">Harry Potter</div>
+                     <div class="hero__meta">2004 | Mystery | 3 Season</div>
+                  </div>
+
+                  <div class="hero__actions">
+                     <button class="primary" type="button">Watch now</button>
+                     <button class="square" type="button" id="heroFavBtn" aria-label="Add to favourites">♡</button>
+                  </div>
+               </div>
+            </section>
+
+            <!-- FILMS -->
+            <section class="section">
+               <div class="section__head">
+                  <h2 class="section__title">Films</h2>
+               </div>
+
+               <div class="searchRow">
+                  <input
+                     id="searchInput"
+                     class="search"
+                     type="search"
+                     placeholder="Search"
+                     autocomplete="off"
+                  />
+                  <button class="chip" type="button" id="btnClear">Clear</button>
+               </div>
+
+               <div class="row" id="filmsRow"></div>
+
+               <div class="empty" id="emptyState" hidden>
+                  Nothing found.
+               </div>
+            </section>
+         </main>
+      </div>
+
+      <!-- films.js MUST be loaded before app.js -->
+      <script src="./films.js"></script>
+      <script src="./app.js"></script>
+   </body>
+</html>
